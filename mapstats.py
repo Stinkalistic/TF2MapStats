@@ -1,6 +1,7 @@
 import os
 
 def setgamepath():
+    global path
     tfpaths=["D:\\SteamLibrary\\steamapps\\common\\Team Fortress 2","C:\\Program Files (x86)\\Steam\\steamapps\\common\\Team Fortress 2"]
     path=""
     for tfpath in tfpaths:
