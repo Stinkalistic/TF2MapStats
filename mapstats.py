@@ -54,7 +54,10 @@ if os.path.exists(path+"//tf//media//viewed.res"):
     gamemodes=[]
     for i in range(len(maps)):
         print(maps[i]+":  "+viewedamounts[i])
-        gamemodes.append(maps[i].split("_")[0])
+        if "_" in maps[i]:
+            gamemodes.append(maps[i].split("_")[0])
+        else:
+            gamemodes.append("other")
     counts=[]
     for gamemode in list(dict.fromkeys(gamemodes)):
         counts.append(gamemodes.count(gamemode))
